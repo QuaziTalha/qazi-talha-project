@@ -7,7 +7,22 @@
 <body>
 
   <%- include ("../partials/nav.ejs") %>
-<h1>Test</h1>
+
+  
+
+  <% news.forEach(function(news) { %>
+
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title"><%= news.title %></h5>
+        <p class="card-text"><%= news.description %></p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+ <% }); %> 
+
+<p>   <%= news %></p>
 </div>
 
 
