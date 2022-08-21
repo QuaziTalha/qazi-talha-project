@@ -29,7 +29,7 @@ const downloadFile = (async (url) => {
   response.sendFile('public/index.html')
   );
   app.get('/tabrez', (req, res) =>
-  response.sendFile('public/binarydecode.html')
+  res.sendFile(path.join(__dirname + '/public/binarydecode.html'))
   );
   app.get('/apitest', (req, res) => 
   newsapi.v2.topHeadlines({
