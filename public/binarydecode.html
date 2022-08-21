@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#decode").click(function(){
+    $("#result").html(parseInt($("#binary").val(), 2));
+  });
+});
+</script>
+</head>
+<body>
+<input id="binary">
+<button id="decode">Decode</button>
+<p id="result"></p>
+
+</body>
+</html>
