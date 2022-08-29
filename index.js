@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express();
 const path = require('path')
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 9000
 
 const NewsAPI = require('newsapi');
 const newsapi = new NewsAPI('092330a1b5264930b1af7c9d7fecabe5');
@@ -40,7 +40,7 @@ const downloadFile = (async (url) => {
   );
 
   app.get('/Login', (req, res)=>{
-    return res.send("hello"+req);
+    return res.send("hello you userid is"+req.query.user_id+" "+req.query.user_password);
   });
   app.get('/FetchFile', (req, res)=>{
     return(downloadFile('https://ipaudio3.club/wp-content/uploads/HHD/Dune/22.mp3'));
